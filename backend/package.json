@@ -1,0 +1,16 @@
+{
+  "name": "vnt-exercise",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.43.0",
+    "aws-sdk": "^2.1044.0",
+    "date-fns": "^2.27.0",
+    "restify": "^8.6.0",
+    "restify-cors-middleware2": "^2.1.2"
+  },
+  "scripts": {
+    "start": "PORT=5000 node ./app.js"
+  }
+}

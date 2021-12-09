@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  backend:
+    build: ./backend/
+    container_name: backend
+    networks:
+      - localnet
+    restart: unless-stopped
+  
+
+  frontend:
+    build: ./frontend/
+    container_name: frontend
+    networks:
+      - localnet
+    restart: unless-stopped
+
+  reverse_proxy:
+    build: ./reverse_proxy/
+    container_name: reverse_proxy
+    networks:
+      - localnet
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    
+
+
+networks:
+  localnet:
+    driver: bridge
